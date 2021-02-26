@@ -1,8 +1,8 @@
 {
-  "name": "<ACTION_NAME>",
+  "name": "git-clone-action",
   "version": "0.1.0",
   "private": true,
-  "description": "<ACTION_DESCRIPTION>",
+  "description": "A action for cloning git repositories.",
   "main": "dist/index.js",
   "scripts": {
     "build": "esbuild src/main.ts --bundle --minify --platform=node --outfile=dist/index.js",
@@ -10,9 +10,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/<USERNAME>/<REPO>.git"
+    "url": "git+https://github.com/sudosubin-ppas/git-clone-action.git"
   },
-  "author": "<ACTION_AUTHOR>",
+  "author": "sudosubin <sudosubin@gmail.com>",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
