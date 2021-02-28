@@ -1,4 +1,4 @@
-name: 'Git Clone'
+name: 'Git Clone Action'
 author: 'sudosubin'
 description: 'A action for cloning git repositories.'
 

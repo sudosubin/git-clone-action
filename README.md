@@ -1,4 +1,4 @@
-# Git Clone
+# Git Clone Action
 
 ![Repository License](https://img.shields.io/github/license/sudosubin-ppas/git-clone-action)
 ![Repository Release](https://img.shields.io/github/v/release/sudosubin-ppas/git-clone-action)
@@ -45,4 +45,4 @@ This project is aiming to replace [`actions/checkout`](https://github.com/action
 
 ## License
 
-Git Clone is [MIT Licensed](./LICENSE).
+Git Clone Action is [MIT Licensed](./LICENSE).
