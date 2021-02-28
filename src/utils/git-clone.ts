@@ -6,12 +6,21 @@ export const gitClone = async (remote: string) => {
   const path = getPath();
   const depth = 1; // TODO(sudosubin): Add customizable options
 
-  const command = `git clone \
-    --single-branch \
-    ${ref ? `--branch ${ref}` : ``} \
-    ${depth ? `--depth ${depth}` : ``} \
-    ${remote} ${path}
-  `;
+  const options: string[] = [];
+  options.push('--single-branch');
 
-  await exec.exec(command);
+  if (ref) {
+    options.push('--branch');
+    options.push(ref);
+  }
+
+  if (depth) {
+    options.push('--depth');
+    options.push(`${depth}`);
+  }
+
+  options.push(remote);
+  options.push(path);
+
+  await exec.exec(`git clone`, options);
 };
