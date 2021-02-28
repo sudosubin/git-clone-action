@@ -1,0 +1,26 @@
+name: 'Clone'
+author: 'sudosubin'
+description: 'A action for cloning git repositories.'
+
+inputs:
+  repository:
+    description: 'Repository owner and name. Ex: sudosubin-ppas/git-clone-action'
+    default: ${{ github.repository }}
+
+  platform:
+    description: 'Git host platform. Ex: github, gitlab, bitbucket, gitee, or else (git.suckless.org, ...)'
+    default: 'github'
+
+  ref:
+    description: 'Git branch or tag to checkout.'
+
+  path:
+    description: 'Relative path from current directory, where to clone.'
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+
+branding:
+  icon: 'download'
+  color: 'white'
