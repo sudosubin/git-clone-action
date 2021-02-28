@@ -12,7 +12,7 @@ inputs:
     default: 'github'
 
   ref:
-    description: 'Git branch, tag, or specific commit SHA to checkout.'
+    description: 'Git branch or tag to checkout.'
 
   path:
     description: 'Relative path from current directory, where to clone.'
