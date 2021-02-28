@@ -1,0 +1,45 @@
+name: 'Test'
+
+on:
+  - pull_request
+
+jobs:
+  test:
+    name: 'Test'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+      - name: 'Prepare action'
+        run: |
+          npm install --global yarn
+          yarn install --frozen-lockfile
+      - name: 'Build action'
+        run: |
+          yarn run build
+
+      - name: 'Test action (Clone Default)'
+        uses: ./
+        with:
+          repository: 'sudosubin-ppas/git-clone-action'
+          platform: 'github'
+          ref: 'main'
+          path: 'repo-dir'
+      - name: 'Test action (Test Default)'
+        run: |
+          git -C ./repo-dir remote get-url origin
+          rm -rf ./repo-dir
+
+      - name: 'Test action (Clone Branch)'
+        uses: ./
+        with:
+          repository: 'sudosubin-ppas/git-clone-action'
+          platform: 'github'
+          ref: 'test'
+          path: 'repo-dir'
+      - name: 'Test action (Test Branch)'
+        run: |
+          git -C ./repo-dir remote get-url origin
+          rm -rf ./repo-dir
