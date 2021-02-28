@@ -6,7 +6,7 @@
 ## Quick Start
 
 ```yml
-- uses: sudosubin-ppas/git-clone-action@v0.1.0
+- uses: sudosubin-ppas/git-clone-action@v1
   with:
     repository: '<USER>/<REPO>'
     platform: 'github'
@@ -21,7 +21,7 @@ This project is aiming to replace [`actions/checkout`](https://github.com/action
 ## Usage
 
 ```yml
-- uses: sudosubin-ppas/git-clone-action@v0.1.0
+- uses: sudosubin-ppas/git-clone-action@v1
   with:
     # Repository owner and name. Ex: sudosubin-ppas/git-clone-action
     # Default: ${{ github.repository }}
