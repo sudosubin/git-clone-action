@@ -1,0 +1,18 @@
+name: 'Release'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: sudosubin-ppas/release-helper-action@v0.1.1
+        with:
+          prepare-command: 'yarn install --frozen-lockfile'
+          build-command: 'yarn run build'
+          target-branch: 'release'
+          create-release: 'false'
