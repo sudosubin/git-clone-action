@@ -4,7 +4,7 @@ description: 'A action for cloning git repositories.'
 
 inputs:
   repository:
-    description: 'Repository owner and name. Ex: sudosubin-ppas/git-clone-action'
+    description: 'Repository owner and name. Ex: sudosubin/git-clone-action'
     default: ${{ github.repository }}
 
   platform:

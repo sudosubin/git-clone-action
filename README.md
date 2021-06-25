@@ -1,12 +1,12 @@
 # Git Clone Action
 
-![Repository License](https://img.shields.io/github/license/sudosubin-ppas/git-clone-action)
-![Repository Release](https://img.shields.io/github/v/release/sudosubin-ppas/git-clone-action)
+![Repository License](https://img.shields.io/github/license/sudosubin/git-clone-action)
+![Repository Release](https://img.shields.io/github/v/release/sudosubin/git-clone-action)
 
 ## Quick Start
 
 ```yml
-- uses: sudosubin-ppas/git-clone-action@v1
+- uses: sudosubin/git-clone-action@v1
   with:
     repository: '<USER>/<REPO>'
     platform: 'github'
@@ -21,9 +21,9 @@ This project is aiming to replace [`actions/checkout`](https://github.com/action
 ## Usage
 
 ```yml
-- uses: sudosubin-ppas/git-clone-action@v1
+- uses: sudosubin/git-clone-action@v1
   with:
-    # Repository owner and name. Ex: sudosubin-ppas/git-clone-action
+    # Repository owner and name. Ex: sudosubin/git-clone-action
     # Default: ${{ github.repository }}
     repository: ''
 
