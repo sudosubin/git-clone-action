@@ -23,7 +23,7 @@ jobs:
       - name: 'Test action (Clone Default)'
         uses: ./
         with:
-          repository: 'sudosubin-ppas/git-clone-action'
+          repository: 'sudosubin/git-clone-action'
           platform: 'github'
           ref: 'main'
           path: 'repo-dir'
@@ -35,7 +35,7 @@ jobs:
       - name: 'Test action (Clone Branch)'
         uses: ./
         with:
-          repository: 'sudosubin-ppas/git-clone-action'
+          repository: 'sudosubin/git-clone-action'
           platform: 'github'
           ref: 'test'
           path: 'repo-dir'
