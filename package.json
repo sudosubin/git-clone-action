@@ -1,6 +1,6 @@
 {
   "name": "git-clone-action",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "A action for cloning git repositories.",
   "main": "dist/index.js",
